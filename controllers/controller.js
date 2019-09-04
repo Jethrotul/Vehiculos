@@ -1,15 +1,16 @@
 "use strict";
-var car;
+let car;
 document
     .getElementById("botonCrearCoche")
     .addEventListener("click", function () {
-    var a = document.getElementById("plate")
+    let a = document.getElementById("plate")
         .value;
-    var b = document.getElementById("brand")
+    let b = document.getElementById("brand")
         .value;
-    var c = document.getElementById("color")
+    let c = document.getElementById("color")
         .value;
-    return createCar(a, b, c);
+    
+    return createCar(a, b, c), primerpaso(), segundopaso();
 });
 function createCar(plate, brand, color) {
     car = new Car(plate, color, brand);
@@ -32,26 +33,26 @@ function createCar(plate, brand, color) {
 document
     .getElementById("botonCrearRuedas")
     .addEventListener("click", function () {
-    var m1 = document.getElementById("brandW1")
+    let m1 = document.getElementById("brandW1")
         .value;
-    var m2 = document.getElementById("brandW2")
+    let m2 = document.getElementById("brandW2")
         .value;
-    var m3 = document.getElementById("brandW3")
+    let m3 = document.getElementById("brandW3")
         .value;
-    var m4 = document.getElementById("brandW4")
+    let m4 = document.getElementById("brandW4")
         .value;
-    var d1 = parseFloat(document.getElementById("diameterW1").value);
-    var d2 = parseFloat(document.getElementById("diameterW2").value);
-    var d3 = parseFloat(document.getElementById("diameterW3").value);
-    var d4 = parseFloat(document.getElementById("diameterW4").value);
+    let d1 = parseFloat(document.getElementById("diameterW1").value);
+    let d2 = parseFloat(document.getElementById("diameterW2").value);
+    let d3 = parseFloat(document.getElementById("diameterW3").value);
+    let d4 = parseFloat(document.getElementById("diameterW4").value);
     return (createCarRuedas(d1, m1),
         createCarRuedas(d2, m2),
         createCarRuedas(d3, m3),
         createCarRuedas(d4, m4));
 });
-var contadorRuedas = 1;
+let contadorRuedas = 1;
 function createCarRuedas(diameter, brand) {
-    var wheel1 = new Wheel(diameter, brand);
+    let wheel1 = new Wheel(diameter, brand);
     car.addWheel(wheel1);
     console.log(car.wheels[contadorRuedas - 1].diameter < 2);
     console.log(car.wheels[contadorRuedas - 1].diameter > 0.4);
@@ -68,4 +69,23 @@ function createCarRuedas(diameter, brand) {
     }
     ;
 }
-;
+
+function primerpaso (){
+    if (car.plate.match(/[0-9]{4}-[a-z]{3}/g)) {
+        let x = document.getElementsByClassName("primerpaso");
+        let i;
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+}
+}
+
+function segundopaso(){
+    if (car.plate.match(/[0-9]{4}-[a-z]{3}/g)) {
+        let x = document.getElementsByClassName("segundopaso");
+        let i;
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+        }
+}
+}

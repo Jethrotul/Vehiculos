@@ -5,27 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/views/estilos.css">
+
     <title>Ejercicio Vehículos</title>
 </head>
 <body>
     <div class="container">
         <div class="row ">
-            <div class="col-8 border">
+            <div class="col-8 border ">
                 <h1 class="display-3 pt-4 pb-3">Ejercicio Vehículos</h1>
-                <form class="form-group">
-                    <input class="form-control" id="plate" type="text" name="Plate" placeholder="Matrícula, Formato 1111-AAA">
-                    <input class="form-control" id="brand" type="text" name="Brand" placeholder="Marca">
-                    <input class="form-control" id="color" type="text" name="Color" placeholder="Color"></br>
+                <form class="form-group primerpaso">
+                    <input class="form-control primerpaso" id="plate" type="text" name="Plate" placeholder="Matrícula, Formato 1111-AAA">
+                    <input class="form-control primerpaso" id="brand" type="text" name="Brand" placeholder="Marca">
+                    <input class="form-control primerpaso" id="color" type="text" name="Color" placeholder="Color"></br>
                 </form>
-                <button id="botonCrearCoche" class="btn btn-primary">Create car</button>
+                <button id="botonCrearCoche" class="btn btn-primary primerpaso">Create car</button>
                 <H4 id="carPlate" class="pt-2">Matricula del coche = </H4>
                 <H4 id="carBrand">Marca del coche = </H4>
                 <h4 id="carColor">Color del coche = </H4>
             </div>
-            <div class="col-8 border pt-1">
+            <div class="col-8 border pt-1 segundopaso">
                 <h1 class="display-4 pt-4 pb-3">Ruedas</h1>
                 <form class="form-group">
-                    <input class="form-control" id="brandW1" type="text" name="brandW1" placeholder="Marca rueda 1">
+                    <input class="form-control segundopaso" id="brandW1" type="text" name="brandW1" placeholder="Marca rueda 1">
                     <input class="form-control" id="diameterW1" type="text" name="diameterW1" placeholder="Diametro rueda 1"></br>
                     <input class="form-control" id="brandW2" type="text" name="brandW2" placeholder="Marca rueda 2">
                     <input class="form-control" id="diameterW2" type="text" name="diameterW2" placeholder="Diametro rueda 2"></br>
@@ -34,7 +36,7 @@
                     <input class="form-control" id="brandW4" type="text" name="brandW4" placeholder="Marca rueda 4">
                     <input class="form-control" id="diameterW4" type="text" name="diameterW4" placeholder="Diametro rueda 4"></br>
                 </form>
-                <button id="botonCrearRuedas" class="btn btn-primary">Create car</button>
+                <button id="botonCrearRuedas" class="btn btn-primary segundopaso">Create car</button>
                 <H4 id="rbrandW1" class="pt-2">Marca de la rueda 1 = </H4>
                 <H4 id="rdiameterW1">Diametro de la rueda 1 = </H4>
                 <H4 id="rbrandW2">Marca de la rueda 2 = </H4>

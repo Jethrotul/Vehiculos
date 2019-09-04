@@ -8,7 +8,8 @@ document
       .value;
     let c: string = (document.getElementById("color") as HTMLInputElement)
       .value;
-    return createCar(a, b, c);
+    document.getElementsByClassName("primerpaso")this.style.display = "none";
+      return createCar(a, b, c);
   });
 function createCar(plate: string, brand: string, color: string) {
   car = new Car(plate, color, brand);
